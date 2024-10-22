@@ -8,6 +8,8 @@ When this consistency is lost, you lose the ability to produce the same derivati
 
 For these reasons it is crucial that we pin down the exact behavior of built-in fetchers, not just for a single Nix implementation, but in the wider Nix ecosystem.
 
+Fixed-output derivations are a different method for fetching, which relies on a combination of a derivation build and output hash to achieve a similar result, but with different characteristics. Notably they require the execution of code that is provided by the expressions, whereas `fetchTree` does not. Refer to "import from derivation" for why that may not be desirable.
+
 # Work in progress
 
 This repository aims to provide a specification and a conformance suite: files that can be used in implementations' test suites.
